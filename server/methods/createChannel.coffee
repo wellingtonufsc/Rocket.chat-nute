@@ -23,7 +23,7 @@ Meteor.methods
 			usernames: members
 			ts: now
 			t: 'c'
-			name: name.toUpperCase()
+			name: name
 			msgs: 0
 			u:
 				_id: Meteor.userId()
@@ -42,7 +42,7 @@ Meteor.methods
 			sub =
 				rid: rid
 				ts: now
-				name: name.toUpperCase()
+				name: name
 				t: 'c'
 				unread: 0
 				u:
