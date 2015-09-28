@@ -24,8 +24,8 @@ Package.onUse(function(api) {
 	api.addFiles('methods.coffee', 'server');
 	api.addFiles('publications.coffee', 'server');
 
-	api.addFiles('rocket-external.js', 'client', {isAsset: true});
-	api.addFiles('public/external.css', 'client', {isAsset: true});
-	api.addFiles('public/external.js', 'client', {isAsset: true});
-	api.addFiles('public/head.html', 'server', {isAsset: true});
+	api.addFiles('rocket-external.js', 'client');
+	api.addFiles('public/external.css', 'client');
+	api.addFiles('public/external.js', 'client');
+	api.addFiles('public/head.html', 'server');
 });
