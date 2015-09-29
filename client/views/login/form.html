@@ -1,49 +1,33 @@
 <template name="loginForm">
-	<form id="login-card" method='/'>
-		{{#if waitActivation}}
-		<header>
-				<h2>{{{_ "Registration_Succeeded"}}}</h2>
-				<p>{{{_ "Wait_activation_warning"}}}</p>
-				<p>{{{_ "Please_wait_activation"}}}</p>
+	<center><div class="widthmax">
+		<div class="inicio-home-esquerda">
+			<p>
+			Olá, seja bem-vindo(a)! <br><br><br>
 
-		</header>
-		{{else}}
-			{{ > loginServices }}
-			{{#if needsValidateEmail}}
-				<div class="alert alert-danger">
-					{{_ "You_need_confirm_email"}}
-				</div>
-			{{/if}}
-			
-		{{/if}}
-		<div class="fields">
-			<div class='input-text active {{showName}}'>
-				<input type="text" name='name' placeholder='{{_ "Name"}}' dir="auto"/>
-			</div>
-			<div class='input-text active {{showEmailOrUsername}}'>
-				<input type="text" name='emailOrUsername' placeholder='{{_ "Email_or_username"}}' autocapitalize="off" autocorrect="off" />
-			</div>
-			<div class='input-text active {{showEmail}}'>
-				<input type="email" name='email' placeholder='{{_ "Email"}}' />
-			</div>
-			<div class='input-text active {{showPassword}}'>
-				<input type="password" name='pass' placeholder='{{_ "Password"}}' />
-			</div>
-			<div class='input-text active {{showConfirmPassword}}'>
-				<input type="password" name='confirm-pass' placeholder='{{_ "Confirm_password"}}' />
-			</div>
+			Aproveite este espaço para conversar com seus(suas) colegas e discutir sobre as temáticas tratadas ao longo da sua formação.
+			</p>
 		</div>
-		<div class="submit">
-			<button data-loading-text="{{_ "Please_wait"}}..." class='button primary login'><span>{{btnLoginSave}}</span></button>
+		<div class="inicio-home-direita">
+			<form id="login-card" method='/'>
+			{{#if waitActivation}}
+				<header>
+				
+					<h2>{{{_ "Registration_Succeeded"}}}</h2>
+					<p>{{{_ "Wait_activation_warning"}}}</p>
+					<p>{{{_ "Please_wait_activation"}}}</p>
+
+				</header>
+				{{else}}
+				<h2>
+					<span class="room-title">{{title}}</span>
+				</h2>
+				{{ > loginServices }}
+				
+				{{/if}}
+			<div class="back-to-login {{showBackToLoginLink}}">
+				<a href="">{{_ 'Back_to_login'}}</a>
+			</div>
+		</form>
 		</div>
-		<div class="register {{showRegisterLink}}">
-			<a href="">{{_ 'Register'}}</a>
-		</div>
-		<div class="forgot-password {{showForgotPasswordLink}}">
-			<a href="">{{_ 'Forgot_password'}}</a>
-		</div>
-		<div class="back-to-login {{showBackToLoginLink}}">
-			<a href="">{{_ 'Back_to_login'}}</a>
-		</div>
-	</form>
+	</div></center>
 </template>
