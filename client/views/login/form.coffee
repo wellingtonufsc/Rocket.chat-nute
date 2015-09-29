@@ -10,6 +10,9 @@ Template.loginForm.helpers
 
 	showConfirmPassword: ->
 		return 'hidden' unless Template.instance().state.get() is 'register'
+		
+	title: ->
+		return RocketChat.settings.get 'Layout_Home_Title'
 
 	showEmailOrUsername: ->
 		return 'hidden' unless Template.instance().state.get() is 'login'
