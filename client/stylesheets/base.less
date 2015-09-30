@@ -34,6 +34,60 @@ a {
 	}
 }
 
+
+.widthmax {
+	
+	max-width: 850px;
+
+}
+
+
+@media screen and (max-width: 600px) { 
+	.inicio-home-esquerda { 
+	width: 80%;
+	padding: 20px;
+	color:#ECEDEC;
+	margin-right: 10%;
+	margin-left: 10%;
+
+	} 
+}
+
+
+@media screen and (max-width: 600px) { 
+	.inicio-home-direita { 
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	padding: 20px;
+	color:#ECEDEC;
+	
+	} 
+}
+
+@media screen and (min-width: 601px) { 
+	.inicio-home-esquerda { 
+	width: 50%;
+	float: left;
+	color:#ECEDEC;
+	padding: 2%;
+	padding-top: 20px;
+	text-align: left
+	} 
+}
+
+@media screen and (min-width: 601px) { 
+	.inicio-home-direita { 
+	width: 50%;
+	float: right;
+	color:#ECEDEC;
+	padding: 2%;
+	padding-top: 5px;
+	} 
+}
+
+
+
 code {
 	border-radius: 4px;
 	border: 1px solid;
@@ -352,7 +406,7 @@ blockquote {
 
 .rocket-h2 {
 	font-weight: 300;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 20px;
 	letter-spacing: -0.5px;
 	margin: 18px 0;
@@ -3245,6 +3299,7 @@ a.github-fork {
 }
 
 .social-login {
+	margin-top: 10px;
 	text-align: center;
 	position: relative;
 	z-index: 1;
