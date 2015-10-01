@@ -12,7 +12,11 @@
 				<li>
 					<a href="{{pathFor 'channel' name=name}}" class="channel-link">
 						<i class="icon-hash"></i>
+						{{#if name 'general'}}
+						Geral
+						{{else}}
 						{{name}}
+						{{/if}}
 					</a>
 				</li>
 			{{/each}}
